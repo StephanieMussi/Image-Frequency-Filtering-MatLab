@@ -59,3 +59,31 @@ Compared to the image suppressing 5x5 neighbourhood of the peaks, the new image 
 
 
 ## The second image
+The image "primate-caged.jpg" is read and displayed:  
+```matlab
+Pc2 = imread('primate-caged.jpg');
+imshow(Pc2)
+```  
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/primate-caged.jpg" width = 300 height = 300>  
+
+The properties of the image are checked:  
+```matlab
+[rows, columns, numberOfColorChannels] = size(Pc2)
+```  
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/image2_prop.png" width = 270 height = 318>  
+It is shown that the image is RGB colored, so it needs to be transformed to grayscale.  
+```matlab
+Pc2 = rgb2gray(Pc2);
+[rows, columns, numberOfColorChannels] = size(Pc2)
+```  
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/image2_prop2.png" width = 270 height = 318>  
+
+Then, the Fourier transform and power spectrum are obtained:  
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/image2_spec1.png" width = 642 height = 344>   
+
+There are several peaks in the spectrum, and some are not easily identified. After removing some peaks, the resultant spectrum and image are as below:  
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/image2_spec2.png" width = 642 height = 344>   
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/image2_2.png" width = 300 height = 300>   
+
+
+
