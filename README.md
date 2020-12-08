@@ -30,8 +30,8 @@ The locations of two symmetric frequency peaks are measured:
 [X, Y] = ginput(2)
 ```  
 
-<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/coorx.png" width = 150 height = 87>
-<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/coory.png" width = 150 height = 87>   
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/coorx.png" width = 130 height = 87>
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/coory.png" width = 130 height = 87>   
 
 The 5x5 neighbourhood elements of the peaks are set to zero in the Fourier transform. The new power spectrum is displayed:  
 ```matlab
@@ -48,12 +48,12 @@ F1 = ifft2(F);
 F1 = uint8(abs(F1));
 imshow(F1)
 ```  
-<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/image1_1.png" width = 300 height = 300>  
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/image1_1.png" width = 300 height = 300>  
 
 The diagonal lines around the center was eliminated, while the lines near the edge are still obvious. A more accurate location measuring helps to produce a better result. One way to improve is to increase the size of neighbourhood that is set to 0.  
 Instead of 5x5, 15x15 neighbourhood elements of the peaks are set to 0. The new spectrum and image are displayed:  
 <img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/image1_spec4.png" width = 642 height = 344>   
-<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/image1_2.png" width = 300 height = 300>  
+<img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/image1_2.png" width = 300 height = 300>  
 Compared to the image suppressing 5x5 neighbourhood of the peaks, the new image has improved in noise suppressing as more diagonal lines are erased.  
 
 
