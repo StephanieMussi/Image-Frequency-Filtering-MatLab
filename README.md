@@ -67,11 +67,15 @@ imshow(Pc2)
 <img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/primate-caged.jpg" width = 300 height = 300>  
 
 The properties of the image are checked:  
+
 ```matlab
 [rows, columns, numberOfColorChannels] = size(Pc2)
 ```  
+
 <img src = "https://github.com/StephanieMussi/Image_Frequency_Filtering_MatLab/blob/main/Figures/image2_prop.png" width = 270 height = 318>  
+
 It is shown that the image is RGB colored, so it needs to be transformed to grayscale.  
+
 ```matlab
 Pc2 = rgb2gray(Pc2);
 [rows, columns, numberOfColorChannels] = size(Pc2)
